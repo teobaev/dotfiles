@@ -1,5 +1,12 @@
 #!/bin/bash
 
-volume=$(pamixer --get-volume-human)
+# use mouse click and scroll to adjust volume
+case $button in
+  1) pamixer --toggle-mute ;;
+  4) pamixer --increase 5 ;;
+  5) pamixer --decrease 5 ;;
+esac
 
+# get volume % or muted state
+volume=$(pamixer --get-volume-human)
 echo $volume
