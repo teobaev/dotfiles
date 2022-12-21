@@ -1,0 +1,7 @@
+#!/bin/bash
+# get cpu avrage usage over last 3 second
+while true :
+do
+	cpu_usage=$(mpstat --dec=0 3 1 | awk 'END{print 100 - $12}')
+	echo $cpu_usage%
+done

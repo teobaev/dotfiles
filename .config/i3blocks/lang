@@ -1,0 +1,13 @@
+#!/bin/bash
+# get current keyboard layout
+
+#get layout on startup
+layout=$(xkb-switch -p | cut --delimiter='(' --fields=1)
+echo $layout
+
+#wait for change of layout and get it
+while true :
+do
+layout_monitor=$(xkb-switch -w -p | cut --delimiter='(' --fields=1)
+echo $layout_monitor
+done
