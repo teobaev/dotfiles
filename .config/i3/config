@@ -15,7 +15,6 @@ exec xset s off
 #move mouse ot of center of the screen and stop following active windows
 mouse_warping none
 exec_always xdotool mousemove 4520 700
-exec --no-startup-id deluged
 exec --no-startup-id "numlockx on"
 
 ## Brightness control laptop
@@ -80,8 +79,8 @@ bar {
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec --no-startup-id alacritty
-bindsym $mod+shift+Return exec xterm -e zsh
+bindsym $mod+Return exec --no-startup-id alacritty -e zsh
+bindsym $mod+shift+Return exec xterm
 # bindsym $mod+shift+Return exec i3-sensible-terminal -e zsh
 
 # kill focused window
