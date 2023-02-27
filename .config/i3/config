@@ -16,6 +16,8 @@ exec xset s off
 mouse_warping none
 exec_always xdotool mousemove 4520 700
 exec --no-startup-id "numlockx on"
+exec /home/teo/.screenlayout/monitor.sh
+bindsym $mod+shift+d exec /home/teo/.screenlayout/monitor.sh
 
 ## Brightness control laptop
 
